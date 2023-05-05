@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  SwiftUIBluePrint
+
+  Created by Roberto Edgar Geiss on 04/05/23.
+  
+*/
+"ContentView.WelcomeMessage" = "Hello world"

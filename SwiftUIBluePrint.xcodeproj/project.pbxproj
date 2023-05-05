@@ -11,6 +11,12 @@
 		E177CCD22A03F055000DAE07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177CCD12A03F055000DAE07 /* ContentView.swift */; };
 		E177CCD42A03F059000DAE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E177CCD32A03F059000DAE07 /* Assets.xcassets */; };
 		E177CCD72A03F059000DAE07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E177CCD62A03F059000DAE07 /* Preview Assets.xcassets */; };
+		E177CCE22A0427DB000DAE07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E177CCE42A0427DB000DAE07 /* Localizable.strings */; };
+		E177CCE92A0432CE000DAE07 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177CCE82A0432CE000DAE07 /* Extensions.swift */; };
+		E177CCEC2A058C7F000DAE07 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E177CCEB2A058C7F000DAE07 /* Realm */; };
+		E177CCEE2A058C7F000DAE07 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E177CCED2A058C7F000DAE07 /* RealmSwift */; };
+		E177CCF02A05948A000DAE07 /* CompositeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177CCEF2A05948A000DAE07 /* CompositeAppDelegate.swift */; };
+		E177CCF22A059CBE000DAE07 /* AppDelegatFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177CCF12A059CBE000DAE07 /* AppDelegatFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		E177CCD12A03F055000DAE07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E177CCD32A03F059000DAE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E177CCD62A03F059000DAE07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E177CCE32A0427DB000DAE07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E177CCE52A042846000DAE07 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E177CCE82A0432CE000DAE07 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E177CCEF2A05948A000DAE07 /* CompositeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeAppDelegate.swift; sourceTree = "<group>"; };
+		E177CCF12A059CBE000DAE07 /* AppDelegatFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegatFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E177CCEE2A058C7F000DAE07 /* RealmSwift in Frameworks */,
+				E177CCEC2A058C7F000DAE07 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,8 @@
 		E177CCCE2A03F055000DAE07 /* SwiftUIBluePrint */ = {
 			isa = PBXGroup;
 			children = (
+				E177CCE62A042D77000DAE07 /* Code */,
+				E177CCDE2A042781000DAE07 /* SupportingFiles */,
 				E177CCCF2A03F055000DAE07 /* SwiftUIBluePrintApp.swift */,
 				E177CCD12A03F055000DAE07 /* ContentView.swift */,
 				E177CCD32A03F059000DAE07 /* Assets.xcassets */,
@@ -67,6 +82,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E177CCDE2A042781000DAE07 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E177CCDF2A04278F000DAE07 /* Localization */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E177CCDF2A04278F000DAE07 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E177CCE42A0427DB000DAE07 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		E177CCE62A042D77000DAE07 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				E177CCE72A042D80000DAE07 /* Utilities */,
+				E177CCEF2A05948A000DAE07 /* CompositeAppDelegate.swift */,
+				E177CCF12A059CBE000DAE07 /* AppDelegatFactory.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		E177CCE72A042D80000DAE07 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E177CCE82A0432CE000DAE07 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,12 +126,17 @@
 				E177CCC82A03F055000DAE07 /* Sources */,
 				E177CCC92A03F055000DAE07 /* Frameworks */,
 				E177CCCA2A03F055000DAE07 /* Resources */,
+				E177CCDD2A040F1F000DAE07 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftUIBluePrint;
+			packageProductDependencies = (
+				E177CCEB2A058C7F000DAE07 /* Realm */,
+				E177CCED2A058C7F000DAE07 /* RealmSwift */,
+			);
 			productName = SwiftUIBluePrint;
 			productReference = E177CCCC2A03F055000DAE07 /* SwiftUIBluePrint.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +163,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = E177CCC32A03F055000DAE07;
+			packageReferences = (
+				E177CCEA2A058C7F000DAE07 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = E177CCCD2A03F055000DAE07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,29 +184,68 @@
 			buildActionMask = 2147483647;
 			files = (
 				E177CCD72A03F059000DAE07 /* Preview Assets.xcassets in Resources */,
+				E177CCE22A0427DB000DAE07 /* Localizable.strings in Resources */,
 				E177CCD42A03F059000DAE07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E177CCDD2A040F1F000DAE07 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E177CCC82A03F055000DAE07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E177CCF02A05948A000DAE07 /* CompositeAppDelegate.swift in Sources */,
 				E177CCD22A03F055000DAE07 /* ContentView.swift in Sources */,
+				E177CCF22A059CBE000DAE07 /* AppDelegatFactory.swift in Sources */,
+				E177CCE92A0432CE000DAE07 /* Extensions.swift in Sources */,
 				E177CCD02A03F055000DAE07 /* SwiftUIBluePrintApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E177CCE42A0427DB000DAE07 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E177CCE32A0427DB000DAE07 /* en */,
+				E177CCE52A042846000DAE07 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E177CCD82A03F059000DAE07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -209,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -275,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +403,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +439,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E177CCEA2A058C7F000DAE07 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E177CCEB2A058C7F000DAE07 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E177CCEA2A058C7F000DAE07 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E177CCED2A058C7F000DAE07 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E177CCEA2A058C7F000DAE07 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E177CCC42A03F055000DAE07 /* Project object */;
 }

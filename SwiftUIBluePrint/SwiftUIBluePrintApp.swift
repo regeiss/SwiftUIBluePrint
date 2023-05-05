@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+typealias AppDelegateType = UIResponder & UIApplicationDelegate
+
 @main
-struct SwiftUIBluePrintApp: App {
+struct SwiftUIBluePrintApp: App
+{
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
+}
+
+class xx: AppDelegateType
+{
+    
 }
